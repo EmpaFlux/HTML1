@@ -1,9 +1,26 @@
 body {
   background-color: #9abf96;
 }
+
 h1 {
   font-size: 80px;
 }
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 150px;
+    height: 150px;
+}
+
+.norotation{
+    width: 150px;
+    height: 200px;
+}
+
 .header {
   padding: 5px;
   font-family: Arial, Helvetica, sans-serif;
@@ -11,56 +28,67 @@ h1 {
   color: #1a505e;
   background-position: bottom;
 }
+
 h3 {
   position: relative;
   top: 10px;
 }
+
 .sub-article {
   font-size: 20px;
 }
+
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 .horizontal-container {
   display: flex;
   flex-direction: column;
 }
+
+.main-article {
+  display: flex;
+  flex-direction: column;
+  flex:66%;
+}
+
 .aside {
-  position: relative;
   color: #ffffcc;
-  flex: 1 1 33%;
+  flex:33%;
   background-color: #7ea679;
-  margin-left: 20px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
-.aside img{
-  width: 150px;
-  height: 200px;
-}
+
 .presentation {
- display: flex;
+ display:flex;
  flex-direction: row;
  padding: 20px;
  min-height: 140px;
  background-color:#6b8d66;
  margin: 10px;
 }
+
 .presentation-name {
 	position: relative;
 	left: 10px;
 	bottom: 20px;
 }
+
 .pesentation-list {
 	position: relative;
 	left: 10px;
 	bottom: 5px;
 }
+
 .speciality{
 	position: relative;
 	top: 20px;
 	font-size: 18px;
 }
+
 .article {
   padding: 10px;
   flex: 1 1 auto;
@@ -69,26 +97,8 @@ h3 {
   text-align: justify;
 }
 
-
-@media only screen and (max-width: 500px) {
-  .vertical-container {
-    flex-direction: column;
-  }
+@media screen and (max-width: 700px) {
   .aside {
-    margin-left: 0px;
-  }
-  .nav {
-    margin-right: 0px;
-  }
-  h1 {
-    font-size: 50px;
-  }
-  .info {
-    position: relative;
-    top: 0px;
-    padding: 2px;
-  }
-  .info>img {
-    clear: left;
+    flex:100%;
   }
 }
